@@ -1,0 +1,10 @@
+{
+  "name": "spike-gql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-cloud-functions": "^2.11.0",
+    "graphql": "^14.6.0"
+  }
+}
