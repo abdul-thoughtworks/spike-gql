@@ -15,7 +15,7 @@ const typeDefs = gql`
 
   type Dog {
     name: String
-    collar: Collar
+    collar: [Collar]
     food(season: String): String
   }
 
@@ -60,10 +60,16 @@ const User: IResolverObject = {
 const Dog: IResolverObject = {
   collar(obj, args, ctx) {
     console.log("Collar Arg 1", obj);
-    return {
-      color: "red",
-      style: "classic",
-    };
+    return [
+      {
+        color: "red",
+        style: "classic",
+      },
+      {
+        color: "black",
+        style: "modern",
+      },
+    ];
   },
   food(obj, args, ctx) {
     console.log("Food args", args);
